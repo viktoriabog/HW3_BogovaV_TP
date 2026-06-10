@@ -77,9 +77,9 @@ const html = `<!DOCTYPE html>
     body { font-family: sans-serif; padding: 2rem; max-width: 900px; margin: auto; }
     table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; }
     th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
-    th { background: #f0f0f0; }
-    h1 { color: #333; }
-    h2 { color: #555; margin-top: 2rem; }
+    th { background: #b2ac85; }
+    h1 { color: #040361; }
+    h2 { color: #; margin-top: 2rem; }
   </style>
 </head>
 <body>

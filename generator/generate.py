@@ -4,14 +4,14 @@ import os
 import sys
 
 NUM_ROWS = 80
-COLUMNS = ["movie_id", "rating", "duration_min", "genre"]
+COLUMNS = ["ID фильма", "Рейтинг", "Длительность в мин", "Жанр"]
 
 def generate_row():
     return {
-        "movie_id": random.randint(1000, 9999),
-        "rating": round(random.uniform(1.0, 10.0), 2),
-        "duration_min": random.randint(60, 240),
-        "genre": random.choice(["Comedy", "Drama", "Action", "Horror"]),
+        "ID фильма": random.randint(1000, 9999),
+        "Рейтинг": round(random.uniform(1.0, 10.0), 2),
+        "Длительность": random.randint(60, 240),
+        "Жанр": random.choice(["Комедия", "Драма", "Боевик", "Ужасы"]),
     }
 
 OUTPUT_DIR = sys.argv[1] if len(sys.argv) > 1 else "/data"
