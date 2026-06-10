@@ -67,6 +67,15 @@ case "$1" in
       reporter \
       -c "ls -la /data"
     ;;
+    report_server)
+    echo ">>> Запуск веб-сервера для report.html на порту 8080..."
+    mkdir -p "$PROJECT_DIR/data"
+    docker run --rm \
+      -v "$PROJECT_DIR/data:/usr/share/nginx/html:ro" \
+      -v "$PROJECT_DIR/reporter/nginx.conf:/etc/nginx/conf.d/default.conf:ro" \
+      -p 8080:80 \
+      nginx:alpine
+    ;;
 
   *)
     echo "Использование: ./run.sh <команда>"
@@ -80,5 +89,6 @@ case "$1" in
     echo "  clear_data         — удалить .csv и .html из папки data/"
     echo "  inside_generator   — показать /data изнутри контейнера генератора"
     echo "  inside_reporter    — показать /data изнутри контейнера аналитика"
+    echo "  report_server      — запустить nginx с report.html на порту 8080"
     ;;
 esac
