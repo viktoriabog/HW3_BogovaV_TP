@@ -14,13 +14,7 @@ case "$1" in
     echo ">>> Готово! Файл: $PROJECT_DIR/data/data.csv"
     ;;
 
-  create_local_data)
-    echo ">>> Создание data.csv локально (без Docker) в папке local_data/..."
-    mkdir -p "$PROJECT_DIR/local_data"
-    python3 "$PROJECT_DIR/generator/generate.py" "$PROJECT_DIR/local_data"
-    echo ">>> Готово! Файл: $PROJECT_DIR/local_data/data.csv"
-    ;;
-
+ ч
   build_reporter)
     echo ">>> Сборка образа reporter..."
     docker build -t reporter "$PROJECT_DIR/reporter"

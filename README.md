@@ -1,17 +1,18 @@
 # HW3_BogovaV_TP
 
 ## Файловая структура
-├── run.sh # главный скрипт 
-├── data/ # сгенерированные данные (CSV + HTML) – создаётся автоматически
-├── generator/
-│ ├── Dockerfile
-│ └── generate.py # скрипт генерации CSV (тема данных - фильмы)
-├── reporter/
-│ ├── Dockerfile
-│ ├── report.js # скрипт аналитика
-│ ├── package.json # зависимости Node.js
-│ └── nginx.conf # конфиг файл 
-└── README.md
+.
+├── data/         # сгенерированные данные (CSV + HTML) – создаётся автоматически
+├── generator
+│   ├── Dockerfile
+│   └── generate.py         # скрипт генерации CSV (тема данных - фильмы)
+├── reporter
+│   ├── Dockerfile
+│   ├── nginx.conf          # конфиг Nginx
+│   ├── package.json
+│   └── report.js           # скрипт аналитика
+├── README.md
+└── run.sh                  # главный скрипт
 
 ## Дополнительное задание: веб-сервер для отчёта
 
